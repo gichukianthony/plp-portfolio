@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  // 3. Reveal Sections on Scroll with Left-to-Right Animation
+  // 3. Reveal Sections on Scroll with Left-to-Right Animations
   function revealOnScroll() {
     const sections = document.querySelectorAll(".slide-in");
     sections.forEach((section) => {
