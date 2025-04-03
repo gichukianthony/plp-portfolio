@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antony Gatitu Gichuki - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar slide-down">
+        <div class="navbar-left">
+          <div class="logo desktop-logo">CyberDev</div>
+        </div>
+        <div class="navbar-right">
+          <div class="logo mobile-logo">CyberDev</div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <!-- Removed CV link from navbar -->
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <!-- Theme Mode Controls -->
+          <div id="theme-mode-controls">
+            <button class="theme-btn" data-theme="light" title="Light Mode">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" fill="orange" />
+                <line x1="12" y1="1" x2="12" y2="4" stroke="orange" stroke-width="2" />
+                <line x1="12" y1="20" x2="12" y2="23" stroke="orange" stroke-width="2" />
+                <line x1="1" y1="12" x2="4" y2="12" stroke="orange" stroke-width="2" />
+                <line x1="20" y1="12" x2="23" y2="12" stroke="orange" stroke-width="2" />
+              </svg>
+            </button>
+            <button class="theme-btn" data-theme="dark" title="Dark Mode">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12 2a10 10 0 0 0 0 20 10 10 0 0 1 0-20z" fill="yellow" />
+              </svg>
+            </button>
+            <button class="theme-btn" data-theme="system" title="System Default">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" fill="var(--text-color)" />
+                <path d="M12 1v2" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M12 21v2" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M4.22 4.22l1.42 1.42" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M18.36 18.36l1.42 1.42" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M1 12h2" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M21 12h2" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M4.22 19.78l1.42-1.42" stroke="var(--text-color)" stroke-width="2" />
+                <path d="M18.36 5.64l1.42-1.42" stroke="var(--text-color)" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO SECTION -->
+      <section id="home" class="hero-section slide-in">
+        <div class="hero-text">
+          <h1 class="main-heading neon-text savage-text">Antony's Portfolio</h1>
+          <p class="sub-heading">Ready to be hired</p>
+          <span id="typing-text"></span>
+          <h2 class="role neon-text savage-text">Full-Stack Developer</h2>
+          <p class="description">
+            Bringing ideas to life with modern HTML, CSS, and JavaScript.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn view-project-btn">View Projects</a>
+            <a href="#cv" class="btn view-cv-btn">CV</a>
+          </div>
+        </div>
+        <div class="hero-image slide-in">
+          <div class="circle-bg"></div>
+          <div class="profile-wrapper">
+            <img src="images/profile.jpg" alt="Developer Headshot" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT ME SECTION -->
+      <section id="about" class="about-section slide-in">
+        <h2 class="savage-text">About Me</h2>
+        <p>
+          I’m Antony Gatitu Gichuki, a passionate and results-driven software developer with a strong background in full-stack web development. I specialize in React, Next.js, Node.js, TypeScript, and MySQL, with hands-on experience in building scalable and efficient applications. My journey into tech started with a deep curiosity for problem-solving, which led me to pursue Computer Science at Kirinyaga University.
+          <br /><br />
+          Beyond coding, I enjoy mentoring aspiring developers, contributing to open-source projects, and continuously learning about emerging technologies. I’m also fascinated by astronomy, psychology, and robotics, and in my free time, I love playing video games, watching movies, and reading novels.
+          <br /><br />
+          Currently, I’m looking for opportunities to apply my skills in a challenging and growth-oriented environment, where I can contribute to impactful projects and collaborate with like-minded professionals.
+        </p>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="projects-section slide-in">
+        <h2 class="savage-text">My Projects</h2>
+        <div id="projects-loader" class="loader-container">
+          <div class="loader"></div>
+        </div>
+        <div id="projects-grid" class="projects-grid"></div>
+      </section>
+
+      <!-- CERTIFICATIONS SECTION -->
+      <!-- <section id="certifications" class="certifications-section slide-in">
+        <h2 class="savage-text">Certifications</h2>
+        <div id="certifications-grid" class="certifications-grid">
+          <div class="certification-card">
+            <img src="images/9514ab8b-a3f4-4d8b-9ed2-6f2ab7aa52f3.webp" alt="Certification 1" />
+            <h3 class="savage-text">Certification Title 1</h3>
+            <p>Issued by Organization</p>
+          </div>
+          <div class="certification-card">
+            <img src="images/998e2f8e-7424-45d8-9227-50c152839914.webp" alt="Certification 2" />
+            <h3 class="savage-text">Certification Title 2</h3>
+            <p>Issued by Organization</p>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- CV SECTION -->
+      <section id="cv" class="cv-section slide-in">
+        <h2 class="savage-text">My CV</h2>
+        <button id="view-cv-btn" class="btn">View CV</button>
+        <div id="cv-container" style="display: none;">
+          <iframe id="cv-viewer" src="antony resume.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="600px"></iframe>
+        </div>
+        <p>
+          <a href="antony resume.pdf" download class="btn">Download CV</a>
+        </p>
+      </section>
+
+      <!-- EXPERIENCES SECTION -->
+      <section id="experiences" class="experiences-section slide-in">
+        <h2 class="savage-text">Experiences</h2>
+        <div class="experience-item">
+          <h3 class="savage-text">Software Developer Intern – Teach2Give (2024)</h3>
+          <ul>
+            <li>Worked on full-stack web development, focusing on building and optimizing APIs using Hono.js and PostgreSQL.</li>
+            <li>Developed frontend applications with React and Redux, ensuring responsiveness and user-friendly interfaces.</li>
+            <li>Gained hands-on experience with JWT authentication, cloud computing (Azure), and database management (Drizzle ORM).</li>
+            <li>Collaborated with a team to design, develop, and deploy a Vehicle Rental Management System, integrating Stripe payments for secure transactions.</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3 class="savage-text">AI for Software Engineers – Power Learn Project (PLP) (2024)</h3>
+          <ul>
+            <li>Learned the fundamentals of Artificial Intelligence (AI) and its application in software development.</li>
+            <li>Explored machine learning algorithms, data preprocessing, and model deployment for AI-driven applications.</li>
+            <li>Worked on projects implementing AI solutions in web and backend development to enhance user experience and automation.</li>
+            <li>Gained hands-on experience in Python, TensorFlow, and AI ethics for responsible AI development.</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3 class="savage-text">CSK Club Leader – Kirinyaga University (2024 – Present)</h3>
+          <ul>
+            <li>Organized and led tech workshops, mentoring students in web development, software engineering principles, and Git version control.</li>
+            <li>Fostered a community for knowledge-sharing and collaboration, helping students navigate their coding journey.</li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3 class="savage-text">Freelance Developer (Ongoing)</h3>
+          <ul>
+            <li>Designed and built web applications, including a Library Management System for a secondary school.</li>
+            <li>Developed a portfolio website with a dynamic dark/light mode toggle and engaging UI animations.</li>
+            <li>Continuously working on projects to improve my skills in React, Next.js, AI, and backend technologies.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- COMMUNITY ENGAGEMENT SECTION -->
+      <!-- <section id="community" class="community-section slide-in">
+        <h2 class="savage-text">Community Engagement</h2>
+        <div id="community-gallery" class="community-gallery">
+          <div class="community-photo">
+            <img src="images/plp.jpg" alt="Community Engagement 1" />
+          </div>
+          <div class="community-photo">
+            <img src="images/profile.jpg" alt="Community Engagement 2" />
+          </div>
+        </div>
+      </section> -->
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="contact-section slide-in">
+        <h2 class="savage-text">Contact Me</h2>
+        <p>
+          Interested in collaborating or just want to say hi? Feel free to
+          <a href="antonygatitu327@gmail.com">email me</a> or fill out the form below.
+        </p>
+        <form id="contact-form" class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+          <p id="form-message"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© <span id="year"></span> Antony Gatitu Gichuki. All rights reserved.</p>
+    </footer>
+
+    <!-- ACCENT COLOR CONTROLS -->
+    <div id="color-controls">
+      <button class="color-btn" data-color="#ff0000" title="Red">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" fill="#ff0000" />
+        </svg>
+      </button>
+      <button class="color-btn" data-color="#ff69b4" title="Pink">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" fill="#ff69b4" />
+        </svg>
+      </button>
+      <button class="color-btn" data-color="#0000ff" title="Blue">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" fill="#0000ff" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" title="Go to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
